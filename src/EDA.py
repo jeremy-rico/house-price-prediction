@@ -13,8 +13,14 @@ def main():
     df_train = pd.read_csv(data_path / "train.csv")
 
     # Data overview
+    # print(df_train.index)
+    # print(df_train.dtypes)
     print(df_train.head())
-    print(df_train.columns)
+    # print(df_train.columns)
+    cols = df_train.columns
+
+    for col in cols:
+        print(f"{col}: {df_train[col].dtypes}")
 
 
 if __name__ == "__main__":
